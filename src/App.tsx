@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import backImage from './assets/quizImag.jpg';
 import QuestionCard from './components/QuestionCard';
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+  const [questions, setQuestions] = useState([]);
+  const [number, setNumber] = useState(0);
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [score, setScore] = useState(0);
+  const [gameOver, setGameOver] = useState(true);
 
   const startTrivia = async () => {
   
