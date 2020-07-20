@@ -10,7 +10,7 @@ interface Props  {
 }
 
 
-const QuestionCard: React.FC<Props> = ({ question, answers, callback, userAnswer, questionNum, totalQuestions }) =>
+const QuestionCard: React.FC<Props> = ({ question, answers, callback, userAnswers, questionNum, totalQuestions }) =>
   (
   
     <div>
@@ -21,7 +21,7 @@ const QuestionCard: React.FC<Props> = ({ question, answers, callback, userAnswer
       <div>
         {answers.map(answer => (
           <div>
-            <button disabled={userAnswer} onClick={callback}>
+            <button disabled={userAnswers} onClick={callback}>
               <span dangerouslySetInnerHTML={{__html: answer}}></span>
             </button>
           </div>
