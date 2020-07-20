@@ -4,7 +4,7 @@ interface Props  {
   question: string;
   answers: string[];
   callback: any;
-  userAnswer: boolean;
+  userAnswers: any;
   questionNum: number;
   totalQuestions: number;
 }
